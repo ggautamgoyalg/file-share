@@ -12,7 +12,7 @@ async function sendEmail({from, to, subject, text, html}) {
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
-    port: process.env.PORT,
+    port: process.env.EMAIL_PORT,
     secure: true, // true for 465, false for other ports
     auth: {
       user:  process.env.EMAIL_USER, // generated ethereal user
